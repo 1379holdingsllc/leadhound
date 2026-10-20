@@ -32,6 +32,15 @@ footer{background:#000;text-align:center;padding:26px 20px;color:#9aa6c0;border-
 <section class="alt"><div class="wrap"><h2>Who it's <span>for</span></h2><div class="who">
 <span>Pressure washing</span><span>Cleaning &amp; janitorial</span><span>Landscaping &amp; lawn care</span><span>Contractors</span><span>Painting</span><span>Roofing</span><span>Plumbing</span><span>HVAC</span><span>Handyman</span><span>Window &amp; gutter cleaning</span><span>Junk removal</span><span>Other local services</span>
 </div></div></section>
+<!-- ===== PRICING / BUY NOW (PLACEHOLDER) =====
+     Paste each package's Stripe Payment Link into its data-stripe-link AND href, then update name/price text.
+     No prices published yet on purpose. -->
+<section id="pricing" class="alt"><div class="wrap"><h2>Buy <span>now</span></h2><div class="grid">
+<div class="card"><h3>Starter</h3><p>Pricing coming soon.</p><a class="btn" href="#" data-stripe-link="" data-package="starter">Buy now</a></div>
+<div class="card"><h3>Pro</h3><p>Pricing coming soon.</p><a class="btn" href="#" data-stripe-link="" data-package="pro">Buy now</a></div>
+<div class="card"><h3>Team</h3><p>Pricing coming soon.</p><a class="btn" href="#" data-stripe-link="" data-package="team">Buy now</a></div>
+</div><p style="text-align:center">Want leads now? <a href="#signup">Request leads below</a>.</p></div></section>
+<!-- ===== END PRICING PLACEHOLDER ===== -->
 <section id="signup"><div class="wrap"><h2>Request <span>leads</span></h2>
 <form action="https://formsubmit.co/9b181f0169c0b5a20ef51c91185aa596" method="POST">
 <input type="hidden" name="_subject" value="LeadHound lead request"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
@@ -49,5 +58,5 @@ footer{background:#000;text-align:center;padding:26px 20px;color:#9aa6c0;border-
 <p style="text-align:center;margin-top:20px">Questions? Call <a href="tel:+14702796694">(470) 279-6694</a></p>
 </div></section>
 <footer><a href="https://1379holdingsllc.github.io/">A 1379 Holdings LLC brand</a></footer>
-<script>if(location.search.indexOf('sent=1')>-1)document.getElementById('ok').style.display='block';</script>
+<script>if(location.search.indexOf('sent=1')>-1)document.getElementById('ok').style.display='block';document.querySelectorAll('[data-stripe-link]').forEach(function(a){var l=a.getAttribute('data-stripe-link');if(l){a.href=l}else{a.addEventListener('click',function(e){e.preventDefault();location.hash='signup'})}});</script>
 </body></html>
