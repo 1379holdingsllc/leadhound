@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeadHound – Tell us your ideal customer</title>
+<link rel="icon" href="logo.jpg">
+<style>
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#14213d;background:#fffaf5;font-size:19px;line-height:1.5}
+  .wrap{max-width:720px;margin:0 auto;padding:28px 20px 60px}
+  h1{font-size:clamp(30px,5vw,42px);margin:0 0 8px} .muted{color:#4a5568}
+  fieldset{border:1px solid #e2e8f0;border-radius:14px;background:#fff;padding:20px;margin:22px 0}
+  legend{font-weight:800;font-size:22px;padding:0 6px}
+  label{display:block;font-weight:600;margin:14px 0 6px}
+  input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;box-sizing:border-box;font-size:19px;padding:13px;border:2px solid #cbd5e0;border-radius:10px;background:#fff}
+  .checks label{font-weight:500;display:flex;gap:10px;align-items:center;margin:8px 0}
+  .checks input{width:22px;height:22px}
+  button{background:#e85d04;color:#fff;border:0;font-weight:800;font-size:22px;padding:18px;border-radius:12px;width:100%;cursor:pointer}
+  footer{text-align:center;color:#4a5568;font-size:16px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p><a href="./" style="font-weight:800;color:#14213d;text-decoration:none">Lead<span style="color:#e85d04">Hound</span></a></p>
+  <p id="ok" style="display:none;background:#e85d04;color:#fff;font-weight:700;padding:14px;border-radius:10px">Thanks! Your profile was sent. We'll be in touch soon.</p>
+  <h1>Describe your ideal customer</h1>
+  <p class="muted">Takes 2 minutes. Tell us who you want to reach and we'll start building your lists.</p>
+  <form action="https://formsubmit.co/9b181f0169c0b5a20ef51c91185aa596" method="POST">
+    <input type="hidden" name="_subject" value="LeadHound – new customer profile">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://1379holdingsllc.github.io/leadhound/onboarding.html?sent=1">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <fieldset><legend>About you</legend>
+      <label for="name">Your name</label><input id="name" name="name" type="text" required>
+      <label for="email">Email for your lead lists</label><input id="email" name="email" type="email" required>
+      <label for="company">Company</label><input id="company" name="company" type="text">
+      <label for="sell">What do you sell? (helps us match leads)</label><input id="sell" name="what_you_sell" type="text" placeholder="e.g. websites, signs, cleaning, marketing">
+    </fieldset>
+    <fieldset><legend>Who should we find?</legend>
+      <label>Industries (pick any)</label>
+      <div class="checks">
+        <label><input type="checkbox" name="industries" value="restaurants_cafes"> Restaurants &amp; cafes</label>
+        <label><input type="checkbox" name="industries" value="beauty_salons_barbers"> Beauty, salons &amp; barbers</label>
+        <label><input type="checkbox" name="industries" value="auto_repair"> Auto repair &amp; car wash</label>
+        <label><input type="checkbox" name="industries" value="health_dental"> Dental, clinics &amp; health</label>
+        <label><input type="checkbox" name="industries" value="retail_shops"> Retail shops</label>
+        <label><input type="checkbox" name="industries" value="trades_contractors"> Trades &amp; contractors</label>
+        <label><input type="checkbox" name="industries" value="offices_professional"> Offices &amp; professional services</label>
+        <label><input type="checkbox" name="industries" value="fitness"> Gyms &amp; fitness</label>
+      </div>
+      <label for="other">Other industries</label><input id="other" name="other_industries" type="text">
+      <label for="area">Service area (ZIP codes, or a town plus a radius in miles)</label><input id="area" name="service_area" type="text" required placeholder="e.g. 30303, 30310 or 'your town + 15 miles'">
+      <label>Must have</label>
+      <div class="checks">
+        <label><input type="checkbox" name="must_have" value="no_website" checked> No website</label>
+        <label><input type="checkbox" name="must_have" value="phone"> A phone number</label>
+        <label><input type="checkbox" name="must_have" value="street_address"> A street address</label>
+        <label><input type="checkbox" name="must_have" value="newly_listed"> Newly listed only</label>
+      </div>
+      <label for="exclude">Leave out (chains, names, categories)</label><input id="exclude" name="exclude" type="text">
+    </fieldset>
+    <fieldset><legend>How often?</legend>
+      <label for="freq">Send me new leads</label>
+      <select id="freq" name="frequency"><option value="weekly">Every week (Monday morning)</option><option value="daily">Every weekday (Pro and Team)</option></select>
+      <label for="fmt">Format</label>
+      <select id="fmt" name="format"><option value="csv">Spreadsheet (CSV) by email</option><option value="sheet">Shared Google Sheet</option></select>
+    </fieldset>
+    <button type="submit">Save my profile</button>
+  </form>
+  <footer>1379 Holdings LLC &middot; <a href="tel:+14702796694">(470) 279-6694</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a></footer>
+</div>
+<script>if(location.search.indexOf('sent=1')>-1)document.getElementById('ok').style.display='block';</script>
+<script data-goatcounter="https://bookitall1379.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
